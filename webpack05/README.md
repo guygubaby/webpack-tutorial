@@ -6,11 +6,11 @@
 
 我们来介绍三种方法：
 
-1. 可以使用 webpack --watch 命令实时监控文件是否改动。但是这种方式必须每次刷新页面，还有因为页面是打开是使用 file 协议，所以在遇到处理 ajax 请求的时候会比较棘手。
+1. 可以使用 `webpack --watch` 命令实时监控文件是否改动。但是这种方式必须每次刷新页面，还有因为页面是打开是使用 file 协议，所以在遇到处理 ajax 请求的时候会比较棘手。
 
-2. 安装 webpack-dev-server 依赖。安装完成后在 webpack.config.js 文件中配置 devServer 字段，它是一个对象。 具体配置可以查看官网文档。最后你需要在 package.json 文件中配置项"scripts"加上一段命令：
+2. 安装 `webpack-dev-server` 依赖。安装完成后在 `webpack.config.js` 文件中配置 `devServer` 字段，它是一个对象。 具体配置可以查看官网文档。最后你需要在 `package.json` 文件中配置项`"scripts"`加上一段命令：
 
-3. "dev": "webpack-dev-server"
+3. `"dev": "webpack serve"`
    这种方法好在你不用每次更改完再重新刷新页面，它会自动帮你刷新页面以及自动执行打包命令，还有它会给你开启一个服务器，可以在一些处理 ajax 请求时更好的解决。
 
 搭建一个 node 服务器，来启动 webpack。首先我们需要安装依赖，express、webpack-dev-middleware，然后我们在根目录下创建一个 server.js。具体内容可以看我自己配置的。最后，使用 node server.js 命令启动服务器。
@@ -18,7 +18,7 @@
 在 webpack.config.js 配置 devSever 字段。
 
 ```js
-  devServer:{
+devServer:{
   contentBase:'./dist',
   open:true,
   hot: true, // 开启热更新
@@ -26,7 +26,7 @@
 }
 ```
 
-然后，在 plugins 字段中引入插件。这里主要还需要引入 webpack,const webpack require("webpack");
+然后，在 plugins 字段中引入插件。这里主要还需要引入 webpack,`const webpack require("webpack");`
 
 ```js
 plugins:[
