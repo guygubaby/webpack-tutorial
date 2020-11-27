@@ -1,7 +1,5 @@
 # webpack-tutorial
 
-## learn webpack
-
 1. [basic usage](/webpack01/README.md)
 
 2. [file-loaders / url-loader](/webpack02/README.md)
