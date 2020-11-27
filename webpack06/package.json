@@ -1,0 +1,19 @@
+{
+  "name": "webpack06",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.8.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "core-js": "3"
+  }
+}
