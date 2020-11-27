@@ -6,7 +6,8 @@
         "targets": {
           "chrome": "67"
         }, //指定浏览器版本号
-        "useBuiltIns": "usage"
+        "useBuiltIns": "usage",
+        "corejs": 3
       }
     ]
   ]

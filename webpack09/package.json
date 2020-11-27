@@ -24,5 +24,9 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "lodash": "^4.17.20"
   }
 }

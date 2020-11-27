@@ -3,7 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    main: './src/index.js',
+    loadash: './src/lodash.js',
+  },
   module: {
     rules: [
       {
@@ -42,7 +45,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, '../dist'),
   },
 };
