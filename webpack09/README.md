@@ -21,3 +21,20 @@ output: {
         path: path.resolve(__dirname, '../dist')
     }
 ```
+
+# webpack 中实现代码分割有几种方式？
+
+首先，要声明一下，代码分割和 webpack 无关。 那么在 webpack 中，实现代码分割有两种方式。分别是同步与异步。
+
+## 同步代码分割（顺序执行）： 借助 webpack 自带的配置，在 webpack 配置文件中配置以下：
+
+```js
+optimization: {
+  splitChunks: {
+    chunks: 'all';
+  }
+}
+```
+
+异步代码分割（import）: 无需做任何配置，会自动进行代码分割。 当然你在配置文件中的 `splitChunks` 同样对异步也有效。
+最后，你可以结合`@babel/plugin-syntax-dynamic-import` 这个依赖异步引入模块。然后在 `import(/_魔法注释_/,'')`,可以在注释中通过`/_ webpackChunkName:"" _/`来定义打包后异步文件的名字。

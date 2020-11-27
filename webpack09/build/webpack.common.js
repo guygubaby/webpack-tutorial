@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   entry: {
     main: './src/index.js',
-    loadash: './src/lodash.js',
+    // loadash: './src/lodash.js',
   },
   module: {
     rules: [
